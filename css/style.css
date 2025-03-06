@@ -1,0 +1,26 @@
+.bg-custom {
+    background: linear-gradient(rgba(6, 169, 172, 0.8), rgba(6, 169, 172, 0.8)), 
+                url('../img/FUNDO-COM-LOGOTIPO.png');
+    background-size: cover; /* Ajusta a imagem para cobrir todo o espaço */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    
+    filter: contrast(1.5) saturate(1.2); /* Ajuste de contraste e saturação */
+}
+
+
+.nav-custom {
+    font-family: 'Montserrat', sans-serif; /* Define a fonte */
+    font-size: 24px; /* Define o tamanho da fonte */
+    font-weight: 600; /* Semibold */
+    color: white !important; /* Deixa a cor da letra branca */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra nas letras */
+}
+
+
+.carousel-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* Garante que a imagem preencha sem distorcer */
+    border-radius: 50%; /* Torna a imagem redonda */
+}
