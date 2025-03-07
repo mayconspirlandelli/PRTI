@@ -1,10 +1,9 @@
 .fundo-site {
-    background: linear-gradient(rgba(6, 169, 172, 0.8), rgba(6, 169, 172, 0.8)), 
-                url('../img/FUNDO-1.png');
-    background-size: cover; /* Ajusta a imagem para cobrir todo o espaço */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */    
-    filter: contrast(1.5) saturate(1.2); /* Ajuste de contraste e saturação */
+    background-color: #1a1a2b; 
+    background-image: url('img/FUNDO-2.png'); 
+    background-size: cover; 
+    background-position: center;
+
 }
 .bg-custom {
     background: linear-gradient(rgba(6, 169, 172, 0.8), rgba(6, 169, 172, 0.8)), 
@@ -23,7 +22,6 @@
     color: white !important; /* Deixa a cor da letra branca */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra nas letras */
 }
-
 
 .carousel-item img {
     width: 300px;
