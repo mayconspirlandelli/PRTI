@@ -1,3 +1,8 @@
+p {
+    text-align: justify;
+}
+
+
 .fundo-site {
     background-color: #1a1a2b; 
     background-image: url('img/FUNDO-2.png'); 
@@ -24,51 +29,65 @@
 }
 
 .cabecalho {
-    background-color: blue; 
-    background-image: url('../img/cabecalho.png'); 
-    background-size: cover; 
+    background-color: blue;
+    background-image: url('../img/cabecalho-sem-logo.png');
+    background-size: cover;
     background-position: center;
-    color: white; 
-    text-align: center; 
-    padding: 20px; 
-    position: relative; 
+    color: white;
     height: 200px;
-}
-
-.logo-inf {
-    position: absolute; 
-    top: 10px; 
-    right: 10px;
+    position: relative;
 }
 
 .logo-inf img {
-    width: 200px; 
-    height: auto; 
-    margin-right: 10px;
-}
-
-.logo-prti {
-    position: absolute; 
-    top: 50px; 
-    left: 10px;
+    width: 200px;
+    height: auto;
 }
 
 .logo-prti img {
-    width: 500px; 
-    height: auto; 
-    margin-left: 10px;
+    width: 500px;
+    height: auto;
 }
 
 .subtitulo {
-    position: absolute; 
-    bottom: 10px; 
-    left: 48px;
-    font-family: 'Montserrat', sans-serif; /* Define a fonte */
-    font-size: 12px; /* Define o tamanho da fonte */
-    font-weight: 400; /* Regular */
-    
-    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400; 
+    margin-left: 70px;
 }
+
+@media (max-width: 768px) { /* Para tablets */
+    .subtitulo {
+        font-size: 12px;
+    }
+
+    .logo-prti img {
+        width: 400px;
+        height: auto;
+    }
+
+    .logo-inf img {
+        width: 200px;
+        height: auto;
+        position: center;
+    }
+}
+
+@media (max-width: 576px) { /* Para celulares */
+    .subtitulo {
+        font-size: 8px;
+    }
+
+    .logo-prti img {
+        width: 200px;
+        height: auto;
+    }
+
+    .logo-inf img {
+        width: 100px;
+        height: auto;
+    }
+}
+
 
 .carousel-item img {
     width: 200px;
@@ -77,3 +96,10 @@
     border-radius: 50%; /* Torna a imagem redonda */
     position: center;
 }
+
+/* Altera o icone do accordion */
+.accordion-button {
+    --bs-accordion-btn-icon: url("https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/plus-lg.svg");
+    --bs-accordion-btn-icon-active: url("https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/power.svg");
+    font-weight: bold;
+} 
