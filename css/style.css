@@ -90,8 +90,6 @@ p {
 
 
 .carousel-item img {
-    width: 200px;
-    height: 200px;
     object-fit: cover; /* Garante que a imagem preencha sem distorcer */
     border-radius: 50%; /* Torna a imagem redonda */
     position: center;
