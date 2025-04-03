@@ -70,6 +70,7 @@ p {
         height: auto;
         position: center;
     }
+
 }
 
 @media (max-width: 576px) { /* Para celulares */
@@ -86,8 +87,8 @@ p {
         width: 100px;
         height: auto;
     }
-}
 
+}
 
 .carousel-item img {
     object-fit: cover; /* Garante que a imagem preencha sem distorcer */
@@ -101,3 +102,54 @@ p {
     --bs-accordion-btn-icon-active: url("https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/power.svg");
     font-weight: bold;
 } 
+
+
+.img-wapper { 
+    max-width: 100%;
+    height: 20em;
+    display: flex;
+    justify-content: center;
+} 
+
+.img {
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+
+.carousel-control-prev, .carousel-control-next {
+    background-color: #e1e1e1;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+@media (min-width: 768px) {
+    .carousel-inner {
+        display: flex;
+    }
+
+    .carousel-item {
+        display: block;
+        margin-right: 0;
+        flex: 0 0 25%;        
+    }
+
+    .img-wapper {
+        height: 23vw;
+    }
+} 
+
+
+.carousel-inner {
+    padding: 1em;
+}
+
+.card {
+    margin: 0 .5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+}
