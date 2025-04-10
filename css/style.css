@@ -2,6 +2,13 @@ p {
     text-align: justify;
 }
 
+.navbar-toggler {
+  border-color: white; /* Cor da borda do botão (ex: amarelo) */
+}
+
+.navbar-toggler-icon {
+  background-image: url("https://icons.getbootstrap.com/assets/icons/list.svg");
+}
 
 .fundo-site {
     background-color: #1a1a2b; 
@@ -97,11 +104,34 @@ p {
 }
 
 /* Altera o icone do accordion */
+.accordion-button::after {
+  order: -1; /* Mover para o lado esquerdo */
+  margin-right: 2rem;
+  margin-left: 0;
+}
+
+/* Altera o icone do accordion */
 .accordion-button {
-    --bs-accordion-btn-icon: url("https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/plus-lg.svg");
-    --bs-accordion-btn-icon-active: url("https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/power.svg");
     font-weight: bold;
 } 
+
+/* Altera o icone do accordion */
+.accordion-button:not(.collapsed) {
+  background-color: white; /* Altere para a cor que você quiser (amarelo nesse caso) */
+  color: #000; /* Cor do texto quando ativo */
+}
+
+/* Altera o icone do accordion */
+.accordion-button::after {
+  background-image: url("https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/plus-lg.svg");
+}
+
+/* Altera o icone do accordion */
+.accordion-button:not(.collapsed)::after {
+  background-image: url("https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/x-lg.svg");
+}
+
+
 
 
 
@@ -203,6 +233,7 @@ p {
   }
 
 
+
 .btn-principal {
     background-color: yellow;
     color: black;
@@ -214,3 +245,43 @@ p {
     color: black;
   }
   
+
+  
+  /* Estilo único para o carrossel com o id 'meuCarrossel' */
+#carouselExampleSlidesOnly {
+  background-color: #f0f0f0; /* Cor de fundo para o carrossel */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+#carouselExampleSlidesOnly .carousel-inner {
+  border: 2px solid #ccc; /* Borda interna do carrossel */
+  border-radius: 10px; /* Arredondar as bordas internas */
+  overflow: hidden; /* Evitar que a imagem ultrapasse os limites */
+}
+
+#carouselExampleSlidesOnly .carousel-item img {
+  border-radius: 5px; /* Arredondar as bordas das imagens */
+  transition: transf	orm 0.5s ease; /* Adicionar transição suave ao zoom das imagens */
+}
+
+#carouselExampleSlidesOnly .carousel-item:hover img {
+  transform: scale(1.1); /* Aplicar zoom ao passar o mouse */
+}
+
+#carouselExampleSlidesOnly .carousel-control-prev-icon, #carouselExampleSlidesOnly .carousel-control-next-icon {
+  background-color: #007bff; /* Cor personalizada para as setas de navegação */
+}
+
+/* Se quiser mudar a cor do texto para o botão de navegação */
+#carouselExampleSlidesOnly .carousel-control-prev, #carouselExampleSlidesOnly .carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  border-radius: 50%; /* Tornar os botões redondos */
+}
+
+/* Especificação do tamanho da imagem para cada tipo de tela */
+@media (max-width: 768px) {
+  #carouselExampleSlidesOnly .carousel-item img {
+    width: 100%; /* Garantir que a imagem ocupe toda a largura da tela em dispositivos menores */
+  }
+}
