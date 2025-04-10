@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="css/scripts.js"></script>
 
+
+    
+
 </head>
 
 <!-- Conteúdo da página -->
@@ -85,7 +88,7 @@
     </section>
 
 
-<!-- Sessão 3: Perguntas -->
+<!-- Sessão 2: Perguntas -->
 <section id="perguntas" class="text-center p-5">
     <div class="accordion" id="accordionPerguntas">
         <div class="accordion-item">
@@ -168,13 +171,116 @@
     </div>
 </section>
 
-<div style="display: none;">
+<!-- Sessão do da Isabela das Perguntas -->
+        <div class="carousel-container">
+            <button class="carousel-arrow prev">‹</button>
+
+            <div class="custom-card">
+            <div id="custom-carousel" class="carousel-slides">
+                <!-- Slide 1 -->
+                <div class="carousel-slide active">
+                <h3>Por que Participar?</h3>
+                <ul>
+                    <li>Desenvolvimento de soluções para problemas reais.</li>
+                    <li>Mentoria e aprendizado contínuo com especialistas da UFG e mercado.</li>
+                    <li>Remuneração garantida durante o programa.</li>
+                    <li>Contribuição direta na transformação digital do Judiciário.</li>
+                    <li>Oportunidades de integração e contratação ao final.</li>
+                </ul>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-slide">
+                <h3>Como Funciona o Programa?</h3>
+                <ul>
+                    <li>Demanda do cliente define os projetos da residência.</li>
+                    <li>Formato híbrido (presencial e remoto).</li>
+                    <li>Seleção criteriosa de alunos qualificados pela UFG.</li>
+                    <li>Imersão em projetos reais com mentoria ativa.</li>
+                    <li>Possibilidade de contratação ao fim do programa.</li>
+                </ul>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-slide">
+                <h3>Benefícios para o Cliente</h3>
+                <ul>
+                    <li>Soluções tecnológicas personalizadas e eficazes.</li>
+                    <li>Acesso às últimas inovações da UFG.</li>
+                    <li>Melhor custo-benefício com equipe remunerada na residência.</li>
+                    <li>Responsabilidade social na formação de novos talentos.</li>
+                </ul>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="carousel-slide">
+                <h3>Benefícios para os Alunos</h3>
+                <ul>
+                    <li>Aprendizado prático com desafios reais.</li>
+                    <li>Bolsa mensal para segurança financeira.</li>
+                    <li>Participação em projetos de grande impacto.</li>
+                    <li>Desenvolvimento de habilidades técnicas e interpessoais.</li>
+                    <li>Networking com profissionais, empresas e órgãos públicos.</li>
+                    <li>Alta chance de contratação ao final da residência.</li>
+                </ul>
+                </div>
+            </div>
+            </div>
+
+            <button class="carousel-arrow next">›</button>
+        </div>
+
+        <script>
+            const slides = document.querySelectorAll('.carousel-slide');
+            const prevBtn = document.querySelector('.carousel-arrow.prev');
+            const nextBtn = document.querySelector('.carousel-arrow.next');
+        
+            let current = 0;
+        
+            function showSlide(index) {
+              slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                slide.style.zIndex = i === index ? 1 : 0;
+              });
+              slides[index].classList.add('active');
+              adjustCardHeight();
+            }
+        
+            prevBtn.addEventListener('click', () => {
+              current = (current - 1 + slides.length) % slides.length;
+              showSlide(current);
+            });
+        
+            nextBtn.addEventListener('click', () => {
+              current = (current + 1) % slides.length;
+              showSlide(current);
+            });
+        
+            function adjustCardHeight() {
+              const card = document.querySelector('.custom-card');
+              const activeSlide = slides[current];
+              requestAnimationFrame(() => {
+                card.style.height = activeSlide.offsetHeight + 80 + 'px';
+              });
+            }
+        
+            window.addEventListener('load', adjustCardHeight);
+            window.addEventListener('resize', adjustCardHeight);
+          </script>
+
+
+
+
+
+
+
+<!-- <div style="display: none;"> -->
 
  <!-- Sessão 3: POR QUE PARTICIPAR? -->
- <section id="porque-participar" class="d-flex align-items-center">
+ <section id="porque-participar" class="d-flex align-items-center" style="background-color: rgb(41, 139, 225);">
     <div class="row w-100">
         <div class="col-lg-6 col-md-6 col-sm-12 mt-1 p-5">
-            <div style="background-color: white; padding: 20px; border-radius: 10px;">
+            <div style="padding: 20px; border-radius: 10px;">
                 <h4>Por que participar?</h4>
                     <p><strong>Desenvolvimento de soluções para problemas reais</strong>: Trabalhe em projetos que atendem a demandas específicas de órgãos governamentais e do Judiciário.</p>
                     <p><strong>Mentoria e aprendizado contínuo</strong>: Tenha acesso a professores especializados da UFG e profissionais renomados, além de treinamentos especializados.</p>

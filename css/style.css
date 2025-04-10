@@ -285,3 +285,134 @@ p {
     width: 100%; /* Garantir que a imagem ocupe toda a largura da tela em dispositivos menores */
   }
 }
+
+
+
+/* ==== AJUSTES PARA CARROSSEL COM 1 ITEM POR VEZ ==== */
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px; /* você pode ajustar conforme o conteúdo */
+  gap: 30px;
+  margin: 40px auto; /* controla espaço externo acima e abaixo */
+}
+
+
+.custom-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  transition: height 0.3s ease;
+  overflow: hidden;
+}
+
+.carousel-slides {
+  position: relative;
+  perspective: 1000px;
+}
+
+.carousel-slide {
+  backface-visibility: hidden;
+  opacity: 0;
+  transform: rotateY(90deg);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  position: relative;
+  transform: rotateY(0deg);
+}
+
+.carousel-slide h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1a1a2b;
+}
+
+.carousel-slide ul {
+  list-style: none;
+  padding: 0;
+}
+
+.carousel-slide {
+  backface-visibility: hidden;
+  opacity: 0;
+  transform: rotateY(90deg);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.carousel-arrow {
+  font-size: 40px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;              /* Aumenta a largura */
+  height: 380px;             /* Aumenta a altura */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #fff; /* Cor de fundo opcional */
+}
+
+.img-wapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-wapper img {
+  width: 150px;              /* Aumenta o tamanho da imagem */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  text-align: center;
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* ==== FIM AJUSTES PARA CARROSSEL COM 1 ITEM POR VEZ ==== */
