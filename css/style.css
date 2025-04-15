@@ -142,7 +142,12 @@ p {
     margin: 0 0.5em;
     box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
     border: none;
-  }
+   }
+
+.card-text {
+  text-align: center;
+}
+
 
   /* .carousel-control-prev,
   .carousel-control-next {
@@ -209,7 +214,7 @@ p {
   @media (min-width: 1200px) {
     .carousel-item {
       margin-right: 0;
-      flex: 0 0 calc(100%/5);
+      flex: 0 0 calc(100%/20);
       display: block;
     }
     .carousel-inner {
@@ -231,17 +236,3 @@ p {
       height: 17em;
     }
   }
-
-
-
-.btn-principal {
-    background-color: yellow;
-    color: black;
-    border: none;
-  }
-  
-  .btn-principal:hover {
-    background-color: gold;
-    color: black;
-  }
-  
