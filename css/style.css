@@ -4,7 +4,9 @@ html {
 
 p {
     text-align: justify;
+    font-size: clamp(14px, 1.5vw, 36px);
 }
+
 
 .navbar-toggler {
   border-color: white; /* Cor da borda do botão (ex: amarelo) */
@@ -139,8 +141,20 @@ p {
 
 #carouselExampleControls {
   margin-right: 2.5rem;  
-  padding-right: 7rem;
+  padding-right: 9rem;
 }
+
+#cards-depoimentos {
+  margin-right: 2.5rem;
+  padding-right: 1rem;
+}
+
+#cards-eixos {
+  margin-right: 1.5rem;
+  padding-right: 1rem;
+}
+
+
 
 /* Carrousel dos Docentes */
 .carousel-inner {
