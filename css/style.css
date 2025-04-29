@@ -1,3 +1,11 @@
+/* 
+Paleta de cores do site
+#06A9AC 
+#1A1A2D
+#FFFFFF
+#000000 
+*/
+
 html {
   scroll-behavior: smooth;
 }
@@ -6,7 +14,6 @@ p {
     text-align: justify;
     font-size: clamp(14px, 1.5vw, 36px);
 }
-
 
 .navbar-toggler {
   border-color: white; /* Cor da borda do botão (ex: amarelo) */
