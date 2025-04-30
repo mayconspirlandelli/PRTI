@@ -5,16 +5,22 @@ Paleta de cores do site
 #FFFFFF
 #000000 
 */
-
+/* ====== COMPORTAMENTO GLOBAL ====== */
 html {
   scroll-behavior: smooth;
 }
 
-p {
-    text-align: justify;
-    font-size: clamp(14px, 1.5vw, 36px);
+body {
+  font-family: 'Lato', sans-serif;
 }
 
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: clamp(14px, 1.2vw, 18px);
+  line-height: 1.7;
+}
+
+/* ====== NAVBAR E LOGOS ====== */
 .navbar-toggler {
   border-color: white; /* Cor da borda do botão (ex: amarelo) */
 }
@@ -23,6 +29,19 @@ p {
   background-image: url("https://icons.getbootstrap.com/assets/icons/list.svg");
 }
 
+.nav-custom {
+  font-family: 'Montserrat', sans-serif; /* Define a fonte */
+  font-size: 24px; /* Define o tamanho da fonte */
+  font-weight: 600; /* Semibold */
+  color: white !important; /* Deixa a cor da letra branca */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra nas letras */    
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ====== FUNDOS ====== */
 .fundo-site {
     background-color: #1a1a2b; 
     background-image: url('img/FUNDO-2.png'); 
@@ -40,14 +59,7 @@ p {
 }
 
 
-.nav-custom {
-    font-family: 'Montserrat', sans-serif; /* Define a fonte */
-    font-size: 24px; /* Define o tamanho da fonte */
-    font-weight: 600; /* Semibold */
-    color: white !important; /* Deixa a cor da letra branca */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra nas letras */    
-}
-
+/* ====== CABEÇALHO ====== */
 .cabecalho {
     background-color: blue;
     background-image: url('../img/cabecalho-sem-logo.png');
@@ -75,6 +87,8 @@ p {
     margin-right: 250px;
 }
 
+
+/* ====== RESPONSIVIDADE DE LOGOS E TEXTOS ====== */
 @media (max-width: 768px) { /* Para tablets */
     .subtitulo {
         font-size: 12px;
@@ -113,6 +127,55 @@ p {
 }
 
 
+
+
+/* ====== TEXTOS COM IMAGENS NAS SEÇÕES ====== */
+section .row > div img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  max-height: 450px;
+}
+
+section .row .col-lg-6 .text-container,
+section .row .col-md-6 .text-container {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #1a1a2b;
+  color: white;
+}
+
+.text-container p {
+  font-size: clamp(14px, 1.2vw, 20px);
+  line-height: 1.6;
+}
+
+
+
+
+/* Responsividade para texto + imagem lado a lado */
+@media (max-width: 768px) {
+  .d-flex.align-items-center {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .d-flex.align-items-center img {
+    margin-bottom: 20px;
+    max-height: 300px;
+  }
+
+  .text-container {
+    padding: 15px;
+  }
+}
+
+
+
+
+/* ====== ACCORDION CUSTOMIZADO ====== */
+
 /* Altera o icone do accordion */
 .accordion-button::after {
   order: -1; /* Mover para o lado esquerdo */
@@ -142,11 +205,11 @@ p {
 }
 
 
-/* .carousel-item img {
-  object-fit: cover; /* Garante que a imagem preencha sem distorcer */
-  /* border-radius: 50%; Torna a imagem redonda */
-  /* position: center; */
-/* } */ 
+
+
+
+
+
 
 #carouselExampleControls {
   margin-right: 2.5rem;  
@@ -272,3 +335,29 @@ p {
       height: 17em;
     }
   }
+
+ 
+  
+/* ====== SEÇÕES UTILITÁRIAS ====== */
+.section-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.img-full {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.video-card,
+.text-card {
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
