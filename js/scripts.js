@@ -19,7 +19,7 @@ function irParaTopo() {
 document.addEventListener("DOMContentLoaded", function () {
     let multipleCardCarousel = document.querySelector("#carouselExampleControls");
 
-    if (window.matchMedia("(min-width: 768px)").matches) {
+    if (window.matchMedia("(min-width: 320px)").matches) {
     let carousel = new bootstrap.Carousel(multipleCardCarousel, {
         interval: true, // Disable automatic sliding
         wrap: true, // Prevent wrapping at the end

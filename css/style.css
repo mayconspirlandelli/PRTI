@@ -71,13 +71,14 @@ p {
 .subtitulo {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    font-weight: 400; 
     margin-left: 70px;
+    margin-right: 250px;
 }
 
 @media (max-width: 768px) { /* Para tablets */
     .subtitulo {
         font-size: 12px;
+        margin-right: 250px;
     }
 
     .logo-prti img {
@@ -96,6 +97,7 @@ p {
 @media (max-width: 576px) { /* Para celulares */
     .subtitulo {
         font-size: 8px;
+        margin-right: 250px;
     }
 
     .logo-prti img {
@@ -156,7 +158,7 @@ p {
   padding-right: 1rem;
 }
 
-#cards-eixos {
+.cards-eixos {
   margin-right: 1.5rem;
   padding-right: 1rem;
 }
