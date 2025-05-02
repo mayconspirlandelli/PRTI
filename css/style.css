@@ -25,9 +25,9 @@ p {
   border-color: white; /* Cor da borda do botão (ex: amarelo) */
 }
 
-.navbar-toggler-icon {
+/* .navbar-toggler-icon {
   background-image: url("https://icons.getbootstrap.com/assets/icons/list.svg");
-}
+} */
 
 .nav-custom {
   font-family: 'Montserrat', sans-serif; /* Define a fonte */
