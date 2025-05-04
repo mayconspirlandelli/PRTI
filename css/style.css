@@ -92,7 +92,7 @@ h1, h2, h3 {
 @media (max-width: 768px) { /* Para tablets */
     .subtitulo {
         font-size: 12px;
-        margin-right: 250px;
+        /* margin-right: 250px; */
     }
 
     .logo-prti img {
@@ -110,8 +110,8 @@ h1, h2, h3 {
 
 @media (max-width: 576px) { /* Para celulares */
     .subtitulo {
-        font-size: 8px;
-        margin-right: 250px;
+        font-size: 10px;
+        /* margin-right: 250px; */
     }
 
     .logo-prti img {
