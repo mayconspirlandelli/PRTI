@@ -8,11 +8,21 @@ Paleta de cores do site
 /* ====== COMPORTAMENTO GLOBAL ====== */
 html {
   scroll-behavior: smooth;
+
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  background-image: url('../img/FUNDO-1virado.png') !important ;
+  background-repeat: repeat !important ;
+  background-size: auto !important ;
+  background-attachment: fixed ;
+  background-position: top left ;
+  background-position: center 0;
+  animation: moverFundo 30s linear infinite !important;
+ 
 }
+
+
 
 p {
   font-family: 'Lato', sans-serif;
@@ -25,13 +35,10 @@ p {
   border-color: white; /* Cor da borda do botão (ex: amarelo) */
 }
 
-/* .navbar-toggler-icon {
-  background-image: url("https://icons.getbootstrap.com/assets/icons/list.svg");
-} */
 
 .nav-custom {
-  font-family: 'Montserrat', sans-serif; /* Define a fonte */
-  font-size: 24px; /* Define o tamanho da fonte */
+   font-family: 'Montserrat', sans-serif;
+  font-size: clamp(16px, 2vw, 24px);
   font-weight: 600; /* Semibold */
   color: white !important; /* Deixa a cor da letra branca */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra nas letras */    
@@ -55,23 +62,28 @@ h1, h2, h3 {
     background-size: cover; /* Ajusta a imagem para cobrir todo o espaço */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita que a imagem se repita */    
-    filter: contrast(1.5) saturate(1.2); /* Ajuste de contraste e saturação */
+    filter: contrast(1.5) saturate(1.2)!important; /* Ajuste de contraste e saturação */
 }
 
 
 /* ====== CABEÇALHO ====== */
-.cabecalho {
-    background-color: blue;
+.cabecalho {  
     background-image: url('../img/cabecalho-sem-logo.png');
     background-size: cover;
     background-position: center;
     color: white;
-    height: 200px;
+    height: auto;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 15px;
 }
 
 .logo-inf img {
-    width: 200px;
+    width: 250px;
     height: auto;
 }
 
@@ -81,10 +93,11 @@ h1, h2, h3 {
 }
 
 .subtitulo {
-    font-family: 'Montserrat', sans-serif;
+   font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    margin-left: 70px;
-    margin-right: 250px;
+    margin: 10px auto 20px auto;
+    max-width: 90%;
+    text-align: center;
 }
 
 
@@ -92,7 +105,7 @@ h1, h2, h3 {
 @media (max-width: 768px) { /* Para tablets */
     .subtitulo {
         font-size: 12px;
-        /* margin-right: 250px; */
+      
     }
 
     .logo-prti img {
@@ -103,7 +116,8 @@ h1, h2, h3 {
     .logo-inf img {
         width: 200px;
         height: auto;
-        position: center;
+        display: block;
+        margin: 0 auto;
     }
 
 }
@@ -207,13 +221,9 @@ section .row .col-md-6 .text-container {
 
 
 
-
-
-
-
 #carouselExampleControls {
-  margin-right: 2.5rem;  
-  padding-right: 9rem;
+  margin-right: 0.9rem;  
+  padding-right: 6rem;
 }
 
 #cards-depoimentos {
@@ -221,9 +231,11 @@ section .row .col-md-6 .text-container {
   padding-right: 1rem;
 }
 
-.cards-eixos {
-  margin-right: 1.5rem;
-  padding-right: 1rem;
+.card-eixo {
+  margin-right: 4rem;
+  margin-left: 2.5rem;
+  padding-right: 0.5rem;
+  padding-top: 2rem ;
 }
 
 
@@ -360,4 +372,213 @@ height: 100%;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
+}
+
+
+.intro-eixos img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.texto-eixos {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #1a1a2d;
+}
+
+.card-intro-eixo {
+  background-color: #ffffff;
+  
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.card-eixo {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.titulo-eixo {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 4rem; 
+}
+
+.card-eixo p {
+  font-size: 0.95rem;
+  line-height: 1.0;
+}
+
+
+
+.cabecalho p {
+    margin-bottom: 2rem;
+    padding-bottom: 10px;
+}
+
+.icones-sociais {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.icones-sociais img {
+    width: 32px;
+    height: 32px;
+}
+
+@media (max-width: 480px) {
+    .logo-prti img {
+        width: 280px;
+    }
+
+    .logo-inf img {
+        width: 120px;
+    }
+
+    .subtitulo {
+        font-size: 12px;
+        margin: 5px 10px;
+    }
+
+    .icones-sociais img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+
+
+.card-intro-eixo {
+  background-color: rgba(22, 22, 26, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.texto-eixos {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+.titulo-eixo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+.card-eixo p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .card-eixo {
+    padding: 1.5rem;
+  }
+
+  .titulo-eixo {
+    font-size: 1rem;
+  }
+}
+
+
+
+#eixos {
+  background-color: #1A1A2D;
+  padding: 60px 0;
+  
+  
+
+}
+
+#eixos img {
+  border-radius: 12px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}
+
+#eixos h3 {
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+#eixos p {
+  color: #f0f0f0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+
+
+
+.card-eixo {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  padding: 2rem;
+  height: 80%;
+  
+  min-height: 60%;
+ 
+}
+
+.card-eixo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.card-eixo h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #06A9AC; /* Agora visível sobre branco */
+  margin-bottom: 1.5rem;
+}
+
+.card-eixo p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #1A1A2D;
+  text-align: justify;
+}
+
+
+@media (max-width: 768px) {
+  .card-eixo {
+    padding: 1.5rem 1rem;
+  }
+
+  .card-eixo h5 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-eixo p {
+    font-size: 0.95rem;
+  }
+}
+
+#sessao1 .texto-sobreposto p {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+
+@media (max-width: 768px) {
+  #sessao1 .texto-sobreposto p {
+    font-size: 0.95rem; /* reduz levemente a fonte */
+    line-height: 1.6;
+  }
 }

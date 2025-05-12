@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +20,6 @@
   
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="css/scripts.js"></script>
     
 </head>
 
@@ -83,22 +84,45 @@
         </div>
     </nav>
 
-    <!-- Sessão 1: Imagem e Texto -->
-    <section id="sessao1" class="d-flex align-items-center my-5">
-        <div class="row w-100 px-5">
-            <div class="col-lg-6 col-md-6 col-smd-12">
-                <img src="img/FOTO.jpg" style="border-radius: 10px;" class="img-fluid w-100" alt="Foto panoramica do alunos do PRTI">
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div style="background-color: white; padding: 20px; border-radius: 10px;">
-                    <p><strong>Oferecido pelo Instituto de Informática da UFG, este programa conecta empresas e órgãos públicos às novas gerações de talentos em TI.</strong></p>
-                    <p>A <strong>Residência em Tecnologia da Informação</strong> é um programa inovador de <strong>formação profissional</strong> oferecido pelo <strong>Instituto de Informática da UFG</strong>. Diferente de uma especialização tradicional, a residência proporciona <strong>experiência prática em projetos reais</strong>, preparando os participantes para os desafios do setor de TI no setor público, especialmente voltados para o <strong>Judiciário</strong>.</p>
-                    <p>Durante o programa, os residentes participam de projetos reais de tecnologia da informação, criando soluções inovadoras para problemas concretos enfrentados pelos nossos clientes, recebem <strong>mentoria de tutores experientes</strong> e, ao final, conquistam um título de <strong>especialista em TI</strong> (pós-graduação lato sensu), ampliando suas oportunidades no mercado. Essa é a oportunidade ideal para quem deseja <strong>aprender de forma intensiva</strong>, com foco nas demandas reais do setor público.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Sessão 1: Imagem central com texto sobreposto e textura lateral -->
+<section id="sessao1" class="py-5" style="background-image: url('img/FUNDO-TEXTURA.png'); background-size: cover; background-position: center;">
+  <div class="container position-relative" style="height: 500px;">
+    
+    <!-- Imagem de fundo dentro do container -->
+    <img src="img/cabe.png" 
+         alt="Foto panorâmica dos alunos do PRTI"
+         class="img-fluid w-100 h-100 position-absolute top-0 start-0 rounded" 
+         style="object-fit: cover; z-index: 1; border-radius: 10px;">
 
+    <!-- Texto sobreposto -->
+    <div class="texto-sobreposto position-absolute top-50 end-0 translate-middle-y text-white p-4 text-end" 
+         style="z-index: 2; max-width: 50%;">
+      <p><strong>Oferecido pelo Instituto de Informática da UFG, este programa conecta empresas e órgãos públicos às novas gerações de talentos em TI.</strong></p>
+      <p>A <strong>Residência em Tecnologia da Informação</strong> é um programa inovador de <strong>formação profissional</strong> oferecido pelo <strong>Instituto de Informática da UFG</strong>. Diferente de uma especialização tradicional, a residência proporciona <strong>experiência prática em projetos reais</strong>, preparando os participantes para os desafios do setor de TI no setor público, especialmente voltados para o <strong>Judiciário</strong>.</p>
+      <p>Durante o programa, os residentes participam de projetos reais de tecnologia da informação, criando soluções inovadoras para problemas concretos enfrentados pelos nossos clientes, recebem <strong>mentoria de tutores experientes</strong> e, ao final, conquistam um título de <strong>especialista em TI</strong> (pós-graduação lato sensu), ampliando suas oportunidades no mercado. Essa é a oportunidade ideal para quem deseja <strong>aprender de forma intensiva</strong>, com foco nas demandas reais do setor público.</p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  @media (max-width: 768px) {
+    #sessao1 .texto-sobreposto {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center !important;
+      max-width: 95% !important;
+      padding: 1rem 1.5rem !important;
+    }
+
+    #sessao1 .container {
+      height: auto !important; /* Permite expandir com o conteúdo */
+      min-height: 700px; /* Aumenta a altura para comportar o texto */
+    }
+  }
+</style>
 
  <!-- Sessão 3: POR QUE PARTICIPAR? -->
  <section id="porque-participar" class="d-flex align-items-center my-5 py-5" style="background-color: rgba(6, 169, 172);">
@@ -141,7 +165,7 @@
 </section>
 
 <!-- Sessão 3: BENEFICIOS -->
-<section id="porque-participar" class="d-flex align-items-center px-5 my-5 py-5" style="background-color: rgba(6, 169, 172);"">
+<section id="beneficios-cliente" class="d-flex align-items-center px-5 my-5 py-5" style="background-color: rgba(6, 169, 172);"">
     <div class="row w-100">
         <div class="col-lg-6 col-md-6 col-sm-12">
             <div style="border-radius: 10px;">
@@ -179,49 +203,124 @@
     </div>
 </section>
 
-    
-    <!-- Sessão 4: Eixos -->
-    <section id="eixos" class="bg-custom nav-custom text-center mt-5 p-3">
-        <h2>EIXOS</h2>
-    </section>
-
-    <!-- Sessão 3: Metodologia e Texto -->
-    <section class="cards-eixos d-flex align-items-center">
-        <div class="row w-100 align-items-center">
-            <div class="col-12 m-3 p-5 pb-1">
-                <div style="background-color: white; padding: 20px; border-radius: 10px;">
-                    <h4>Residência em TI – Tribunal de Justiça de Goiás</h4>
-                    <p>O Tribunal de Justiça de Goiás e a UFG fecharam uma turma de 60 alunos para atuarem diretamente nos problemas enfrentados pelo tribunal. 
-                        Nesse curso, são abordados três eixos temáticos elaborados em parceria com o tribunal, tendo em vista as soluções pretendidas. São eles:
-                    </p>                
-                </div>
-            </div>
-    </section>
 
 
-    <!-- Sessão 3: Eixos -->
-    <section class=" cards-eixos text-center">
-        <div class="row m-3 p-3" style="border-radius: 10px;">
-            <div class="col-md-4 mt-2">
-                <div class="card m-2 p-3" style="width: 100%">
-                    <h4 class="text-center">Processos e Gestão de TI</h4>
-                    <p>Este eixo capacita os residentes a atuarem no planejamento, gestão e melhoria contínua de processos de TI, alinhados com as melhores práticas do mercado, como ITIL e COBIT. Os participantes aprenderão a estruturar a governança de TI, gerenciar riscos, implementar segurança da informação e compreender a Lei Geral de Proteção de Dados (LGPD).</p>
-                </div>
-            </div>
-            <div class="col-md-4 mt-2">
-                <div class="card m-2 p-3" style="width: 100%">
-                    <h4 class="text-center">Análise e Construção de Software</h4>
-                    <p>Focado no desenvolvimento e aprimoramento de software robusto, seguro e escalável, este eixo prepara os residentes para todas as etapas do ciclo de vida de um software, desde a análise de requisitos até a implementação e testes. Os participantes aprenderão linguagens de programação, arquitetura de software, desenvolvimento front-end e back-end, além de ferramentas para garantir qualidade e segurança.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mt-2">
-                <div class="card m-2 p-3" style="width: 100%">
-                    <h4 class="text-center">Análise e Ciência de Dados</h4>
-                    <p>Este eixo capacita os residentes a extrair insights estratégicos a partir de grandes volumes de informação. Os participantes aprenderão modelagem de dados, aprendizado de máquina, inteligência artificial, data science e Big Data, utilizando ferramentas avançadas para análise e visualização de dados.</p>                   
-                </div>
-            </div>
+
+
+
+
+
+<section id="eixo" class="bg-custom nav-custom text-center mt-5 p-3">
+  <h2>Eixos Temáticos</h2>
+</section>
+
+
+
+<section id="eixo" class="py-5">
+  <div class="container rounded-4 p-4" style="background-color: #1A1A2D;">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center">
+        <div class="destaque-imagem-eixos mb-4">
+          <img src="img/eixos.jpg" alt="Turma no Tribunal de Justiça" class="img-fluid imagem-eixos-destaque">
         </div>
-    </section>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-white">
+        <h3 class="mb-3 text-center" style="font-family: 'Montserrat', sans-serif;">Residência em TI – Tribunal de Justiça de Goiás</h3>
+        <p class="lead text-center" style="font-size: 1.1rem; line-height: 1.8;">
+          A parceria com o Tribunal de Justiça de Goiás resultou em uma turma dedicada à resolução de problemas reais enfrentados pelo Judiciário.
+          Foram elaborados três pilares de atuação prática que orientam a formação dos residentes no programa:
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<div class="container mb-5">
+  <div class="row g-4 justify-content-center align-items-stretch">
+    <!-- Eixo 1 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card-eixo p-4 h-100">
+        <h5 class="titulo-eixo">Processos e Gestão de TI</h5>
+        <p>Este eixo capacita os residentes a atuarem no planejamento, gestão e melhoria contínua de processos de TI, alinhados com as melhores práticas do mercado, como ITIL e COBIT. Os participantes aprenderão a estruturar a governança de TI, gerenciar riscos, implementar segurança da informação e compreender a Lei Geral de Proteção de Dados (LGPD).</p>
+      </div>
+    </div>
+    <!-- Eixo 2 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card-eixo p-4 h-100">
+        <h5 class="titulo-eixo">Análise e Construção de Software</h5>
+        <p>Focado no desenvolvimento e aprimoramento de software robusto, seguro e escalável, este eixo prepara os residentes para todas as etapas do ciclo de vida de um software, desde a análise de requisitos até a implementação e testes. Os participantes aprenderão linguagens de programação, arquitetura de software, desenvolvimento front-end e back-end, além de ferramentas para garantir qualidade e segurança.</p>
+      </div>
+    </div>
+    <!-- Eixo 3 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card-eixo p-4 h-100">
+        <h5 class="titulo-eixo"> Análise e Ciência de Dados</h5>
+        <p>Este eixo capacita os residentes a extrair insights estratégicos a partir de grandes volumes de informação. Os participantes aprenderão modelagem de dados, aprendizado de máquina, inteligência artificial, data science e Big Data, utilizando ferramentas avançadas para análise e visualização de dados.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+  .card-eixo {
+    margin-top: 2rem;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+
+  }
+
+  .card-eixo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  }
+
+  .titulo-eixo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .card-eixo p {
+    font-size: 15px;
+    color: #333333;
+    line-height: 1.7;
+    text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+    .card-eixo .row {
+      flex-direction: column;
+    }
+  }
+
+</style>
+
+
+
 
     <!-- Sessão Galeria de fotos dos Docentes -->
     <section id="eixos-titulo" class="bg-custom nav-custom text-center mt-5 p-3">
@@ -664,8 +763,9 @@
     
     <!-- Botão flutuante -->
     <a id="btnTopo" class="smooth_scroll btn btn-lg rounded-circle" 
-        href="#header" id="scroll-to-top" title="Voltar ao Topo" 
+        href="#header" title="Voltar ao Topo"
         style="position: fixed; bottom: 30px; right: 50px; z-index: 1050; color: aliceblue;">
+
 
         <i class="bi bi-arrow-up-circle-fill fs-2"></i>
     </a>
