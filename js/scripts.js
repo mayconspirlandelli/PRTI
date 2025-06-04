@@ -59,3 +59,20 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('texto-completo-expandido').style.display = 'none';
   }
 </script>
+
+
+function typeWriter() {
+  if (index < fullText.length) {
+    el.innerHTML += fullText.charAt(index);
+    index++;
+
+    // Faz scroll automático em telas pequenas
+    if (window.innerWidth <= 768) {
+      el.scrollTop = el.scrollHeight;
+    }
+
+    setTimeout(typeWriter, 20);
+  } else {
+    el.style.borderRight = "none";
+  }
+}
